@@ -131,3 +131,5 @@ go run src/main.go
 - Qué problema encontré: Error de importación no utilizada con el driver de SQLite.
 - Cómo lo resolví: Se actualizó la función `sql.Open` utilizando explícitamente `sqlite.DriverName` como se indicó en los materiales de clase.
 - Próximo paso: Realizar los commits incrementales correspondientes.
+
+
