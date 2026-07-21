@@ -1,10 +1,9 @@
-// Punto de entrada del taller
-// Reemplaza este archivo con tu código (Go, Java, Python, etc. según indique el docente)
-
 package main
 
 import "fmt"
 
 func main() {
-	fmt.Println("Taller de POO — [tu nombre]")
+	fmt.Println("Proyecto de Programación Orientada a Objetos")
+	fmt.Println("Estudiante: Nerquis Carrera")
+	fmt.Println("Unidad 3 - Talleres de Go")
 }
