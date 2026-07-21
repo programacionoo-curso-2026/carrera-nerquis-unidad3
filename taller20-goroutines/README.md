@@ -13,3 +13,11 @@ Cada goroutine ejecuta la función `ShowGoroutine`, recibe un identificador y mu
 Debido a la ejecución concurrente, las goroutines pueden terminar en diferente orden en cada ejecución.
 
 ## Estructura del proyecto
+
+```text
+taller20-goroutines
+│
+├── README.md
+│
+└── src
+    └── main.go
