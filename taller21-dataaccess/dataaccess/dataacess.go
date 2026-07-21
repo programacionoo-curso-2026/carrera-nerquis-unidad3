@@ -4,21 +4,21 @@ import (
 	"database/sql"
 	"log"
 
-	"github.com/glebarez/sqlite" //[cite: 2]
+	"github.com/glebarez/sqlite"
 )
 
 func InitDB() *sql.DB {
 	// Usamos sqlite.Open tal como indica el material de clase
-	db, err := sql.Open(sqlite.DriverName, "competenciasdocentes.db") //[cite: 2]
+	db, err := sql.Open(sqlite.DriverName, "competenciasdocentes.db")
 	if err != nil {
-		log.Fatal(err) //[cite: 2]
+		log.Fatal(err)
 	}
 
-	err = db.Ping() //[cite: 2]
+	err = db.Ping()
 	if err != nil {
-		log.Fatal(err) //[cite: 2]
+		log.Fatal(err)
 	}
 
-	log.Println("¡Conectado a SQLite con éxito!") //[cite: 2]
+	log.Println("¡Conectado a SQLite con éxito!")
 	return db
 }
