@@ -20,6 +20,27 @@ Unidad 3
 
 - Taller 20 - Goroutines
 
+## Estructura del proyecto
+
+```text
+carrera-nerquis-unidad3
+│
+├── README.md
+├── BITACORA.md
+│
+├── src
+│   └── main.go
+│
+└── taller20-goroutines
+    ├── README.md
+    └── src
+        └── main.go
+```
+
 ## Ejecución
 
-Cada taller contiene su propio README con las instrucciones correspondientes.
+Cada taller contiene su propio README con las instrucciones correspondientes para ejecutar el proyecto.
+
+## Control de versiones
+
+El proyecto utiliza Git y GitHub para registrar los avances mediante commits progresivos y documentar el proceso de desarrollo.
