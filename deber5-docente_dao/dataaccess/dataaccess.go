@@ -7,7 +7,7 @@ import (
 	_ "github.com/glebarez/sqlite"
 )
 
-// InitDB inicializa la conexión con la base de datos SQLite.
+// InitDB establece la conexión con la base de datos SQLite.
 func InitDB() *sql.DB {
 
 	db, err := sql.Open("sqlite", "competenciasdocentes.db")
