@@ -114,7 +114,7 @@ Esta función:
 
 ## Paquete dao
 
-Este paquete contiene la clase:
+Este paquete contiene la estructura:
 
 ```
 DocenteDAO
@@ -123,6 +123,8 @@ DocenteDAO
 La cual implementa las operaciones de acceso a datos.
 
 Métodos implementados:
+
+---
 
 ### NewDocenteDAO()
 
@@ -261,7 +263,7 @@ Las evidencias del funcionamiento incluyen:
 - Consulta mediante ID.
 - Consulta mediante correo electrónico.
 
-Se recomienda agregar capturas de pantalla de la ejecución dentro de la carpeta:
+Las capturas de pantalla de la ejecución pueden almacenarse dentro de la carpeta:
 
 ```
 docs/
@@ -300,3 +302,38 @@ Los cambios fueron registrados mediante commits progresivos siguiendo buenas pr�
 La implementación del patrón DAO permitió conectar una aplicación desarrollada en Go con una base de datos SQLite, logrando realizar operaciones de persistencia sobre la entidad Docente.
 
 El proyecto demuestra la separación entre la lógica de negocio y el acceso a datos, facilitando el mantenimiento y escalabilidad del sistema.
+
+---
+
+# Pruebas realizadas
+
+Durante el desarrollo del proyecto se realizaron pruebas para verificar el correcto funcionamiento del patrón DAO.
+
+| Prueba realizada | Resultado |
+|---|---|
+| Conexión con base de datos SQLite | Correcta |
+| Creación de tabla docentes | Correcta |
+| Inserción de docentes | Correcta |
+| Búsqueda por ID del docente | Correcta |
+| Búsqueda por correo electrónico | Correcta |
+
+Las pruebas fueron ejecutadas utilizando el comando:
+
+```bash
+go run main.go
+```
+
+Resultados obtenidos:
+
+- La conexión con SQLite se realizó correctamente.
+- La tabla docentes fue creada automáticamente.
+- Los registros fueron insertados correctamente.
+- Las búsquedas por ID y correo retornaron la información esperada.
+
+---
+
+# Autor
+
+**Nerquis Carrera**  
+Ingeniería en Sistemas de la Información  
+Universidad Internacional del Ecuador
