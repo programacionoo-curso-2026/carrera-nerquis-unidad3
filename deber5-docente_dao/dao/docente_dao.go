@@ -65,7 +65,7 @@ func (d *DocenteDAO) Insert(docente *model.Docente) error {
 	return nil
 }
 
-// GetByID obtiene un docente por su ID.
+// GetByID permite consultar un docente mediante su identificador.
 func (d *DocenteDAO) GetByID(id string) (*model.Docente, error) {
 
 	query := `
@@ -96,7 +96,7 @@ func (d *DocenteDAO) GetByID(id string) (*model.Docente, error) {
 	return &docente, nil
 }
 
-// GetByEmail obtiene un docente por su correo electrónico.
+// GetByEmail permite consultar un docente mediante su correo electrónico.
 func (d *DocenteDAO) GetByEmail(email string) (*model.Docente, error) {
 
 	query := `
