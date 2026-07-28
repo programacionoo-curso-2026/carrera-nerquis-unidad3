@@ -9,3 +9,5 @@ type Docente struct {
 	Cargo           string
 	AniosAntiguedad int
 }
+
+// Entidad utilizada para almacenar información del docente.
