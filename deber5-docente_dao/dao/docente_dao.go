@@ -39,7 +39,7 @@ func (d *DocenteDAO) CreateTable() error {
 	return nil
 }
 
-// Insert inserta un nuevo docente en la base de datos.
+// Insert almacena un nuevo docente dentro de la base de datos.
 func (d *DocenteDAO) Insert(docente *model.Docente) error {
 
 	query := `
