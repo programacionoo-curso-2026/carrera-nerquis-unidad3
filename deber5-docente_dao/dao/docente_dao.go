@@ -7,7 +7,7 @@ import (
 	"log"
 )
 
-// DocenteDAO maneja las operaciones sobre la tabla docentes.
+// DocenteDAO permite realizar operaciones de acceso a datos sobre docentes.
 type DocenteDAO struct {
 	db *sql.DB
 }
