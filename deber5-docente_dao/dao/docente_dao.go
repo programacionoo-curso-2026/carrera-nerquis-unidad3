@@ -17,7 +17,7 @@ func NewDocenteDAO(db *sql.DB) *DocenteDAO {
 	return &DocenteDAO{db: db}
 }
 
-// CreateTable crea la tabla docentes si no existe.
+// CreateTable crea la estructura de la tabla docentes en SQLite.
 func (d *DocenteDAO) CreateTable() error {
 
 	query := `
