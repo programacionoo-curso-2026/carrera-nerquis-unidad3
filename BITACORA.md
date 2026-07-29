@@ -1,135 +1,181 @@
-# Bitácora de desarrollo - Unidad 3
+# BITÁCORA DE AVANCES
 
-## 20/07/2026 - Taller 20: Goroutines - Fase 1: Creación del proyecto
+## 18/07/2026 – Taller 20 – Fase 1: Organización inicial del proyecto
 
 ### Qué hice:
-- Se creó el repositorio del proyecto en GitHub dentro de la organización programacionoo-curso-2026.
-- Se clonó el repositorio en la computadora.
-- Se creó la carpeta correspondiente al Taller 20.
-- Se organizó la estructura del proyecto:
-  - taller20-goroutines
-  - src
-  - main.go
-- Se implementó la primera versión del programa utilizando goroutines en Go.
+- Creé la carpeta correspondiente al Taller 20.
+- Configuré la estructura inicial del programa en Go.
+- Preparé el archivo principal (`main.go`) para implementar el uso de goroutines.
 
 ### Qué problema encontré:
-- El repositorio inicialmente fue clonado dentro de una carpeta incorrecta, generando una estructura duplicada.
-- El código proporcionado originalmente presentaba errores de sintaxis que impedían su ejecución.
+- Al ejecutar el programa aparecieron errores relacionados con la organización del código y la estructura del proyecto.
 
 ### Cómo lo resolví:
-- Se eliminó la copia incorrecta del repositorio y se realizó nuevamente la clonación desde la ubicación correcta.
-- Se corrigieron las instrucciones de importación, la impresión en pantalla y el manejo del tiempo para que el programa compilara correctamente.
+- Reorganicé los archivos y corregí la estructura del proyecto para que el código compilara correctamente.
 
 ### Próximo paso:
-- Ejecutar el programa y verificar el funcionamiento de las goroutines.
+- Implementar las goroutines y verificar su ejecución.
 
 ---
 
-## 20/07/2026 - Taller 20: Goroutines - Fase 2: Implementación y pruebas
+## 18/07/2026 – Taller 20 – Fase 2: Implementación de goroutines
 
 ### Qué hice:
-- Se implementó la función ShowGoroutine.
-- Se agregaron 10 goroutines ejecutándose de forma concurrente.
-- Se utilizó la generación de tiempos aleatorios para simular diferentes retrasos.
-- Se realizaron pruebas ejecutando el programa con:
-
-go run src/main.go
+- Implementé la lógica utilizando goroutines.
+- Probé la ejecución concurrente del programa.
+- Verifiqué que los resultados fueran los esperados.
 
 ### Qué problema encontré:
-- La salida de las goroutines no aparecía en orden numérico.
+- La salida del programa no siempre aparecía en el orden esperado debido a la ejecución concurrente.
 
 ### Cómo lo resolví:
-- Se verificó que el comportamiento era correcto debido a que las goroutines se ejecutan de manera concurrente y cada una finaliza en un momento diferente.
+- Revisé la sincronización de la ejecución y validé el funcionamiento del programa mediante varias pruebas.
 
 ### Próximo paso:
-- Documentar el funcionamiento del proyecto.
+- Iniciar la configuración del acceso a base de datos.
 
 ---
 
-## 20/07/2026 - Taller 20: Goroutines - Fase 3: Documentación
+## 20/07/2026 – Taller 21 – Fase 1: Configuración de DataAccess
 
 ### Qué hice:
-- Se creó el README.md del Taller 20.
-- Se documentó el objetivo del proyecto.
-- Se explicó el funcionamiento del programa.
-- Se agregaron instrucciones para ejecutar el código.
-- Se documentaron las decisiones de diseño.
-- Se actualizó el README principal del repositorio.
+- Creé la carpeta del Taller 21.
+- Configuré el módulo Go.
+- Instalé el driver SQLite.
+- Implementé el paquete `dataaccess`.
 
 ### Qué problema encontré:
-- El archivo README tenía un nombre diferente al solicitado por la estructura del proyecto.
+- La conexión con SQLite no se establecía correctamente durante las primeras pruebas.
 
 ### Cómo lo resolví:
-- Se renombró correctamente el archivo utilizando Git para mantener el historial de cambios.
+- Verifiqué la instalación del driver y corregí la inicialización de la base de datos utilizando `sql.Open()` y `Ping()`.
 
 ### Próximo paso:
-- Mejorar la organización y legibilidad del código.
+- Integrar la conexión con el programa principal.
 
 ---
 
-## 20/07/2026 - Taller 20: Goroutines - Fase 4: Comentarios y organización del código
+## 20/07/2026 – Taller 21 – Fase 2: Pruebas de conexión
 
 ### Qué hice:
-- Se agregaron comentarios explicativos dentro del archivo main.go.
-- Se documentó el funcionamiento de la función ShowGoroutine.
-- Se explicó la generación de retrasos aleatorios.
-- Se documentó la creación de las goroutines.
-- Se explicó el funcionamiento general del programa.
+- Integré el paquete `dataaccess` con `main.go`.
+- Probé la apertura y cierre de la base de datos.
+- Verifiqué que la conexión funcionara correctamente.
 
 ### Qué problema encontré:
-- Era necesario mejorar la comprensión del código para facilitar su revisión.
+- Existían errores en las rutas de importación del proyecto.
 
 ### Cómo lo resolví:
-- Se añadieron comentarios descriptivos en cada parte importante del programa.
+- Actualicé las importaciones para que coincidieran con el nombre definido en `go.mod`.
 
 ### Próximo paso:
-- Revisar el historial de cambios y preparar la entrega.
+- Continuar con el siguiente taller.
 
 ---
 
-## 20/07/2026 - Taller 20: Goroutines - Fase 5: Control de versiones
+## 22/07/2026 – Taller 22 – Fase 1: Desarrollo del programa
 
 ### Qué hice:
-- Se realizaron múltiples commits utilizando mensajes descriptivos.
-- Se subieron los cambios al repositorio remoto de GitHub.
-- Se verificó el historial de commits.
-- Se organizó correctamente la estructura del repositorio.
+- Creé la carpeta correspondiente al Taller 22.
+- Implementé la lógica solicitada utilizando goroutines.
+- Organicé el código para facilitar su mantenimiento.
 
 ### Qué problema encontré:
-- Al inicio no se tenía una estructura organizada del repositorio y algunos archivos requerían ajustes.
+- Algunas funciones no se ejecutaban en el orden esperado debido a la concurrencia.
 
 ### Cómo lo resolví:
-- Se reorganizaron las carpetas siguiendo el instructivo del proyecto.
-- Se corrigieron los nombres de los archivos y se mantuvo un historial de cambios mediante commits separados.
+- Revisé la secuencia de ejecución y realicé pruebas hasta obtener el comportamiento esperado.
 
 ### Próximo paso:
-- Optimizar la sincronización de las goroutines.
+- Documentar el funcionamiento del taller.
 
 ---
 
-## 20/07/2026 - Taller 20: Goroutines - Fase 6: Sincronización con WaitGroup
+## 22/07/2026 – Taller 22 – Fase 2: Validación final
 
 ### Qué hice:
-- Se reemplazó el uso de time.Sleep en la función principal por sync.WaitGroup.
-- Se implementó un contador para esperar la finalización de las 10 goroutines.
-- Se agregó un mensaje indicando que todas las goroutines finalizaron correctamente.
-- Se realizaron nuevas pruebas para comprobar el correcto funcionamiento del programa.
+- Verifiqué el correcto funcionamiento del programa.
+- Revisé el código y actualicé el README del taller.
 
 ### Qué problema encontré:
-- El uso de time.Sleep no garantizaba que todas las goroutines terminaran antes de finalizar el programa, ya que dependía de un tiempo fijo de espera.
+- Fue necesario realizar pequeños ajustes en la estructura del programa para mejorar su organización.
 
 ### Cómo lo resolví:
-- Se implementó sync.WaitGroup para sincronizar la ejecución de todas las goroutines.
-- Cada goroutine notifica cuando finaliza su ejecución y el programa espera hasta que todas concluyan antes de terminar.
+- Reorganicé el código y confirmé nuevamente la ejecución del programa.
 
 ### Próximo paso:
-- Revisar la documentación, verificar la estructura del repositorio y confirmar que el proyecto esté listo para su entrega.
+- Comenzar el desarrollo del Deber 4.
 
-```markdown
-### [21/07/2026] — Taller 21, Fase 1: Entidades y Conexión SQLite
-- Qué hice: Creación del paquete model con la entidad Docente, configuración del paquete dataaccess con SQLite y prueba exitosa en el main.go.
-- Qué problema encontré: Error de importación no utilizada con el driver de SQLite.
-- Cómo lo resolví: Se actualizó la función `sql.Open` utilizando explícitamente `sqlite.DriverName` como se indicó en los materiales de clase.
-- Próximo paso: Realizar los commits incrementales correspondientes.
+---
 
+## 24/07/2026 – Deber 4 – Fase 1: Implementación del DocenteDAO
 
+### Qué hice:
+- Creé la carpeta `deber4-docente_dao`.
+- Implementé la estructura `DocenteDAO`.
+- Desarrollé el constructor `NewDocenteDAO()`.
+- Implementé el método `CreateTable()` para crear la tabla de docentes.
+
+### Qué problema encontré:
+- Se presentaron errores durante las primeras pruebas de creación de la tabla.
+
+### Cómo lo resolví:
+- Revisé la sentencia SQL y corregí la definición de los campos de la tabla.
+
+### Próximo paso:
+- Implementar la inserción de docentes.
+
+---
+
+## 25/07/2026 – Deber 4 – Fase 2: Inserción de información
+
+### Qué hice:
+- Implementé el método `Insert()`.
+- Probé la inserción de registros desde `main.go`.
+- Verifiqué que los datos quedaran almacenados correctamente en SQLite.
+
+### Qué problema encontré:
+- Se generaban errores al intentar insertar registros repetidos.
+
+### Cómo lo resolví:
+- Revisé el uso de la clave primaria y del campo `email` para evitar duplicados.
+
+### Próximo paso:
+- Implementar las búsquedas requeridas para el siguiente deber.
+
+---
+
+## 28/07/2026 – Deber 5 – Fase 1: Búsqueda de docentes
+
+### Qué hice:
+- Creé la carpeta `deber5-docente_dao`.
+- Implementé el método `GetByID()`.
+- Implementé el método `GetByEmail()`.
+- Reutilicé la estructura desarrollada en el Deber 4.
+
+### Qué problema encontré:
+- Era necesario controlar los casos en los que la consulta no encontraba registros.
+
+### Cómo lo resolví:
+- Implementé el manejo de `sql.ErrNoRows` para retornar mensajes de error adecuados cuando el docente no existe.
+
+### Próximo paso:
+- Integrar ambos métodos en `main.go`.
+
+---
+
+## 28/07/2026 – Deber 5 – Fase 2: Integración y pruebas
+
+### Qué hice:
+- Actualicé `main.go` para crear la tabla, insertar docentes y realizar búsquedas por ID y correo electrónico.
+- Probé el funcionamiento completo del DAO.
+- Preparé la documentación del README para registrar las evidencias de ejecución.
+
+### Qué problema encontré:
+- Fue necesario verificar que los datos de prueba coincidieran con las consultas realizadas.
+
+### Cómo lo resolví:
+- Ajusté los registros utilizados durante las pruebas y confirmé que las búsquedas devolvieran la información correcta.
+
+### Próximo paso:
+- Realizar los commits finales, actualizar la documentación y publicar la versión definitiva del proyecto en GitHub.
