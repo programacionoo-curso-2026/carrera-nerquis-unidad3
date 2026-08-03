@@ -179,3 +179,62 @@
 
 ### Próximo paso:
 - Realizar los commits finales, actualizar la documentación y publicar la versión definitiva del proyecto en GitHub.
+
+---
+
+## 02/08/2026 – Taller 23 – Fase 1: Creación y configuración del proyecto
+
+### Qué hice:
+- Cloné el repositorio de la unidad desde GitHub.
+- Creé la carpeta `taller23-goroutines`.
+- Configuré la estructura del proyecto con los archivos `README.md`, `go.mod` y `main.go`.
+- Inicialicé el módulo Go mediante `go mod init`.
+- Implementé la estructura `Order` y las variables globales necesarias para el taller.
+
+### Qué problema encontré:
+- Al inicio tuve inconvenientes con la ubicación del repositorio y la navegación entre carpetas desde PowerShell, lo que ocasionó errores al intentar acceder al proyecto.
+
+### Cómo lo resolví:
+- Verifiqué la ruta correcta del repositorio, confirmé que se encontraba dentro de la carpeta **Downloads** y continué la configuración del proyecto desde la ubicación correcta hasta lograr que compilara sin errores.
+
+### Próximo paso:
+- Implementar la lógica concurrente utilizando Goroutines y WaitGroup.
+
+---
+
+## 02/08/2026 – Taller 23 – Fase 2: Implementación de Goroutines y sincronización
+
+### Qué hice:
+- Implementé la función `generateOrders()` para crear las órdenes.
+- Configuré tres Goroutines para procesar las órdenes de forma concurrente.
+- Utilicé `sync.WaitGroup` para esperar la finalización de todas las Goroutines.
+- Realicé pruebas de ejecución para verificar el procesamiento concurrente.
+
+### Qué problema encontré:
+- Durante las primeras pruebas el programa ejecutaba una versión anterior del código, por lo que únicamente mostraba el listado de órdenes y el contador permanecía en cero.
+
+### Cómo lo resolví:
+- Revisé el contenido del archivo `main.go`, confirmé que estaba trabajando sobre el archivo correcto dentro de `taller23-goroutines/src` y ejecuté nuevamente el programa hasta obtener el comportamiento esperado.
+
+### Próximo paso:
+- Implementar Mutex para proteger los recursos compartidos y generar el reporte final de las órdenes.
+
+---
+
+## 02/08/2026 – Taller 23 – Fase 3: Implementación de Mutex y validación final
+
+### Qué hice:
+- Implementé un `Mutex` para controlar el acceso concurrente a cada orden.
+- Implementé un `Mutex` adicional para proteger el contador global `totalUpdates`.
+- Agregué la función `reportOrderStatus()` para mostrar el estado final de todas las órdenes.
+- Ejecuté el programa y verifiqué que se realizaran correctamente las 60 actualizaciones correspondientes a las tres Goroutines.
+- Actualicé el README del taller con las evidencias de ejecución y la documentación del proyecto.
+
+### Qué problema encontré:
+- Fue necesario revisar nuevamente la implementación de `updateOrderStatus()` para asegurar que la actualización del contador global estuviera protegida correctamente mediante Mutex.
+
+### Cómo lo resolví:
+- Revisé la lógica de sincronización, confirmé el uso correcto de `sync.Mutex`, ejecuté nuevamente el programa y validé que el resultado final mostrara las 60 actualizaciones y el estado final de todas las órdenes.
+
+### Próximo paso:
+- Publicar la versión final del proyecto en GitHub y verificar que toda la documentación cumpla con la rúbrica de evaluación.
