@@ -18,7 +18,50 @@ var (
 	updateMutex  sync.Mutex
 )
 
+func generateOrders(n int) []*Order {
+	orders := make([]*Order, n)
+
+	for i := 0; i < n; i++ {
+		orders[i] = &Order{
+			ID:     i + 1,
+			Status: "Pendiente",
+		}
+	}
+
+	return orders
+}
+
+func updateOrderStatus(order *Order) {
+	fmt.Printf("Orden %d\n", order.ID)
+}
+
 func main() {
+
 	rand.Seed(time.Now().UnixNano())
-	fmt.Println("Taller 23 - Goroutines y Mutex")
+
+	var wg sync.WaitGroup
+
+	wg.Add(3)
+
+	orders := generateOrders(20)
+
+	for i := 0; i < 3; i++ {
+
+		go func() {
+
+			defer wg.Done()
+
+			for _, order := range orders {
+				updateOrderStatus(order)
+			}
+
+		}()
+
+	}
+
+	wg.Wait()
+
+	fmt.Println("Todas las operaciones completadas.")
+	fmt.Printf("Total Actualizaciones %d\n", totalUpdates)
+
 }
