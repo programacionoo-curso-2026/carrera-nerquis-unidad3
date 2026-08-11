@@ -35,6 +35,20 @@ var preguntas = []Pregunta{
 		OpcionC:  ":=",
 		Solucion: "A",
 	},
+	{
+		Pregunta: "¿Qué palabra clave se utiliza para declarar una constante en Go? &blank",
+		OpcionA:  "const",
+		OpcionB:  "var",
+		OpcionC:  "let",
+		Solucion: "A",
+	},
+	{
+		Pregunta: "¿Qué operador se utiliza para comparar si dos valores son iguales en Go? &blank",
+		OpcionA:  "=",
+		OpcionB:  "==",
+		OpcionC:  ":=",
+		Solucion: "B",
+	},
 }
 
 // ---------- Resultados (ranking en memoria) ----------
